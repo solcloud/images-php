@@ -6,6 +6,7 @@
 }
 PHP_VERSION=$1
 
+echo "Use login ID not email, eg: solcloud"
 docker login
 docker push solcloud/php:$PHP_VERSION
 docker logout
