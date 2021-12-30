@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 [ -n "$1" ] || {
     echo "Usage: $0 PHP_VERSION"
     exit 1
