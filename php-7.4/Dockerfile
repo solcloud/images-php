@@ -7,7 +7,7 @@ RUN apt-get update && \
 
 
 RUN pecl install imagick \
-    && pecl install xdebug-2.9.8 \
+    && pecl install xdebug \
     && pecl install zip \
     && pecl install redis \
     && docker-php-ext-enable imagick zip redis
