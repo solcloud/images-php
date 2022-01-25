@@ -33,3 +33,6 @@ RUN docker-php-ext-install sockets
 RUN apt-get install -y vim
 RUN echo "umask 007" >> /etc/apache2/envvars
 RUN echo 'export HOME=/tmp' >> /etc/apache2/envvars
+
+COPY custom71.ini /usr/local/etc/php/conf.d/custom71.ini
+RUN chmod 0444 /usr/local/etc/php/conf.d/custom71.ini
