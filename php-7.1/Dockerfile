@@ -36,3 +36,4 @@ RUN echo 'export HOME=/tmp' >> /etc/apache2/envvars
 
 COPY custom71.ini /usr/local/etc/php/conf.d/custom71.ini
 RUN chmod 0444 /usr/local/etc/php/conf.d/custom71.ini
+RUN sed -i '/^mozilla\/DST_Root_CA_X3/s/^/!/' /etc/ca-certificates.conf && update-ca-certificates -f
